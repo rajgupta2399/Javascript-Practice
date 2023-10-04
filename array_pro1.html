@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function serachData()
+        {
+            var nameList=["Rajeev","Rakesh","Ravi","Ranjeet","Rupesh","Raju"];
+            var input=prompt("Enter a name ?");
+            var temp=0;
+            for(var i=0;i<nameList.length;i++)
+            {
+                if(nameList[i]==input)
+                {
+                    // document.write("<br/>Name is found : "+input)
+                    // break;
+                    temp=1;
+                }
+                // else 
+                // {
+                //     document.write("<br/>Name is not found : "+input)
+                // }
+            }
+
+            if(temp==1)
+            {
+                document.write("<br/>Name is found : "+input)
+            }
+            else 
+            {
+                document.write("<br/>Name is not found : "+input)
+            }
+
+        }
+
+        function updatedata()
+        {
+            var nameList=["Rajeev","Rakesh","Ravi","Ranjeet","Rupesh","Raju"];
+            var old_name=prompt("Enter a old name ?")
+            var new_name=prompt("Enter a new name ?")
+            var temp=false;
+            for(var i=0;i<nameList.length;i++)
+            {
+                if(nameList[i]==old_name)
+                {
+                    nameList[i]=new_name;
+                    temp=true;
+                }
+            }
+            if(temp==true)
+            {
+                for(var i=0;i<nameList.length;i++)
+                {
+                    document.write("<br/>"+nameList[i])
+                }
+            }
+            else 
+            {
+                document.write("<br/> Old name is not found : "+old_name)
+            }
+        }
+
+        function deleteData()
+        {
+            var nameList=["Rajeev","Rakesh","Ravi","Ranjeet","Rupesh","Raju"];
+            var input=prompt("Enter a name for delete purpose ?");
+            var temp=false;
+            for(var i=0;i<nameList.length;i++)
+            {
+                if(nameList[i]==input)
+                {
+                    nameList[i]="";
+                    temp=true;
+                }
+            }
+            if(temp==true)
+            {
+                for(var i=0;i<nameList.length;i++)
+                {
+                   
+                    if(nameList[i]=="")
+                    {
+                        // continue
+                        // i=i+1;
+                        i++
+                    }
+                     document.write("<br/>"+nameList[i])
+                }
+            }
+            else 
+            {
+                document.write("<br/> Nam is not matched :"+input)
+            }
+
+        }
+
+        function findAll()
+        {
+            var num=[2,-3,4,5,-6,7,-8,9];
+            for(var i=0,pos=0,neg=0,even=0,odd=0;i<num.length;i++)
+            {
+                if(num[i]%2==0)
+                {
+                    even++;
+                }
+                else 
+                {
+                    odd++;
+                }
+
+                if(num[i]>0)
+                {
+                    pos++;
+                }
+                else 
+                {
+                    neg++;
+                }
+            }
+            document.write("<br/> Total even number is : "+even)
+            document.write("<br/> Total odd number is : "+odd)
+            document.write("<br/> Total postive number is : "+pos)
+            document.write("<br/> Total negative number is : "+neg)
+        }
+    </script>
+</head>
+<body>
+
+    <input type="submit" value="Search data" onclick="serachData()">
+    <br>
+    <input type="submit" value="Update data" onclick="updatedata()">
+    <br>
+    <input type="submit" value="datelete data" onclick="deleteData()">
+    <br>
+    <!-- Wap in js create a numberic array and find how many even , odd , pos , neg numbers are that array ? -->
+    <input type="submit" value="Find all" onclick="findAll()">
+
+    
+</body>
+</html>

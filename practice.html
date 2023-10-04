@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  Hello world program
+        console.log('hello world');
+
+        // Declare variable using var
+        // declare variable using var is not a good practice because var is function scope variable 
+        var userName = "raj";
+        var age = 18;   
+        
+        console.log(`hello ${userName} your age is  ${age}`);
+
+        //  MORE ABOUT VARIABLES
+
+        // variable is used store the different data types and one variable store only one data type 
+
+
+        // USE OF LET AND CONST 
+        // let and const are block {} scope variable..
+        // 1 -------- let 
+        let name = 'raj'
+        name = 'sagar'
+        console.log(name)
+
+        // let same variable cannot be re declared but we can change the value of let keyword name variable...
+
+        // 2 --------- const 
+        const firstName = 'sagar'
+        // firstName = 'raj'
+        console.log(firstName)
+
+        // const keyword variable cannot be redeclared and cannot be change the value of const variable...
+        // ERROR -- Uncaught TypeError: Assignment to constant variable. 
+        // String Indexing -- is used to print the index of the string from 0 to infinity 
+
+        console.log(firstName[0])
+        console.log(firstName[1])
+        console.log(firstName[2])
+        console.log(firstName[3])
+        console.log(firstName[4])
+
+        // Useful string methods
+        // 1 ----- TRIM METHOD IS USED TO TRIM THE EXTRA SPACES 
+
+        const school = '    GOVERNMENT     '
+        console.log(school.length) // 19
+        let afterTrim = school.trim()
+        console.log(afterTrim) // 'GOVERNAMENT' -- 10
+
+        // 2 ----- SLICE METHOD IS USED TO PRINT THE INDEX VALUE FROM 0 TO INFINITY 
+
+        const alpha = 'abcdefghijklmnopqrstuvwxtz'
+        console.log(alpha.length) // 26
+        console.log(alpha.slice(5,10))
+
+        // 3 ------ ToUppercase METHOD IS USED TO CHANGE THE LOWERCASE VARIABLE TO UPPERCASE
+
+        console.log(alpha.toUpperCase()) // ABCDEFGHIJKLMNOPQRSTUVWXTZ
+
+        // 4 ------ ToLowercase METHOD IS USED TO CHANGE THE UPPERCASE VARIABLE TO LORWERCASE
+        console.log(alpha.toLowerCase()) // abcdefghijklmnopqrstuvwxtz
+
+
+        // Null, undefined, BigInt, typeof
+
+        // NULL --- is a data-type of js 
+        // it is data type but treated as object its biggest error in js
+        const null1 = null
+        console.log(null1)
+        console.log(typeof null1)
+
+        // UNDEFINED --- is data-type of js..when create we create a variable without assigning the value called undefined
+
+        let raj;
+        console.log(raj) // undefined
+
+        // BigInt ----- is data type of js..when we have to big number so we just use this data type
+
+        const number = BigInt(12)
+        let number1 = 12n
+        console.log(number1 + number)
+        console.log(typeof number) // bigint
+
+        // Booleans and Comparison Operator
+        // Boolean ---- IS THE TRUE OR FALSE DATA-TYPE WHEN CONDITION IS TRUE THE CODE WILL RUN IF CONDITION IS FALSE IS THE CONDITION WILL NOT RUN....
+
+        if(typeof name === 'string'){
+            console.log(`its ` +true)
+           
+        }
+        else{
+            console.log(`its ` +false)
+        }
+
+        //  Truthy and Falsy Values
+        // FALSY VALUES --- 1) null
+                            // 2) undefined
+                            // 3) 0
+                            // 4) false
+
+        // TRUTHY VALUES --- 1) 123
+                            //  2) true
+                            //  3) 'abc'  
+                            
+        // if else statement
+        // if condition is true insde block code will run 
+        // if condition is false else block code will run
+
+        const qualification = 12
+        const age2 = 17
+        const college = "SRCC"
+        if(qualification <= 12){
+            console.log('its 12th pass.....eligible')
+        }
+        else{
+            console.log('its not 12th pass.....not eligible')
+        }
+
+        //  Ternary Operator
+        console.log(qualification<=12 ? 'its 12th' : 'its not')
+
+        // && || operator
+        // && --- and operator is used to check the statement must be true
+
+        if(qualification<=12 && age<=15){
+            console.log('eligible')
+        }
+        else{
+            console.log('not eligible')
+
+        }
+        // || --- or operator is used to check one statement is true
+
+        if(qualification<=12 || age<=19){
+            console.log('eligible')
+        }
+        else{
+            console.log('not eligible')
+
+        }
+
+        // Nested if else
+        if(name === 'raj'){
+            if(qualification<=12 && college === 'SRCC'){
+                console.log(`hello ${name} your college name is ${college}`)
+            }
+            else {
+                console.log('not belongs too')
+            }
+        }
+        else{
+            console.log('name not found')
+        }
+
+        // console.log(sarabhjeet)
+
+        // If else if else
+
+        const num1 = 10;
+        const num2 = 20;
+        const num3 = 30;
+        const num4 = 40;
+
+        if(num1>num2 && num1>num3 && num1>num4){
+            console.log(`number 1 is greater ${num1}`)
+        }
+        else if(num2>num1 && num2>num3 && num2>num4){
+            console.log(`number 2 is greater ${num2}`)
+        }
+        else if(num3>num1 && num3>num1 && num3>num4){
+            console.log(`number 3 is greater ${num3}`)
+        }
+        else{
+            console.log(`number 4 is greater ${num4}`)
+        }
+
+        // Switch statement
+
+        const weekday = ('enter the week day number : ');
+
+        switch(weekday){
+            case 0:
+                console.log('invalid number')
+                break
+            case 1:
+                console.log('Monday')
+                break
+            case 2:
+                console.log('tuesday')
+                break
+            case 3:
+                console.log('wednesday')
+                break
+            case 4:
+                console.log('thursday')
+                break
+            case 5:
+                console.log('friday')
+                break
+            case 6:
+                console.log('saturday')
+                break
+            case 7:
+                console.log('sunday')
+                break
+            default:
+                console.log('invalid day and number');
+        }
+
+        // While loop
+        let number2 = 10
+        let i = 0;
+        while(i<=number2){
+            console.log(i)
+            i++
+        }
+
+        // While loop examples
+        // 1+2+3 = 6
+
+        let j =0;
+        let total = 0
+        while(j<=number2){
+            total = total+j
+            j++
+            
+        }
+        console.log(total) // sum of 10 = 55
+
+        // ● For loop
+        for(let k=0; k<=number2; k++){
+            console.log(k)
+        }
+
+        //  For loop examples
+        // factorial of number
+        let fact = 1
+        for(let l=1; l<=number2; l++){
+            fact *= l
+        }
+        console.log(fact)
+
+
+        // ● Break and continue keyword
+        // break keyword when condition is given they will break the loop 
+        // continue keyword when condition is true they wil leave that condtion annext item will print
+
+        array = [1,2,3,4,"5",6,7,8,9,10]
+        for(let i=0; i<array.length; i++){
+            if(typeof array[i]==="string"){
+                continue;
+            }
+            else{
+                console.log(array[i])
+            }
+        }
+
+        for(let i=0; i<array.length; i++){
+            if(typeof array[i]==="string"){
+                break;
+            }
+            else{
+                console.log(array[i])
+            }
+        }
+
+        // ● Do while loop
+
+        let m =5;
+        do{
+            m++
+        }while(m<number2)
+            console.log(m)
+
+        // ---------------------------------------- Arrays in JavaScript --------------------------------------
+        
+        // ● Intro to arrays
+        // array is a collection of data type where we can store more than one value...
+
+        const person = ['raj','sagar','amit','mukesh','priyanka','rajeev','pratibha','akshat','vansh']
+        console.table(person);
+
+        // ● Push pop shift unshift
+
+        // push ------- add new data type to array
+
+        person.push("gupta")
+        console.table(person);
+
+        // pop ------- delete the last element fromm the array and store in the new varibale 
+        
+        const newperson = person.pop()
+        console.log(newperson)
+
+        // unshift ---- add new element the arrat from the begining of the array..
+
+        person.unshift("kumar")
+        console.table(person)
+
+        // shift ---- delete the element from the begining in the array
+
+        const unshift = person.shift()
+        console.log(unshift)
+        console.table(person)
+
+
+        // ● Primitive vs reference data types
+        // primitive data type store in the memory of computer and its change while changing the code...example ------ data-types
+
+        // reference data types store the value in the heap of computer and its own address.....its canit channge while changing the value...example ------- arrays,object etc..
+
+
+        // ● Clone array & spread operator
+
+        // clone array ---- copy the array by concating method
+
+        const newPerson = [].concat(person,'gupta','kumar')
+        console.log(newPerson)
+
+        // spread operator --- copy the array by easy method..(...arrayName)
+
+        const newPerson1 = [...person,"sharma",'kashyap']
+        console.log(newPerson1) 
+
+
+        // ● For loop --- IN ARRAY
+        for(let i=0;i<newPerson1.length; i++){
+            console.log(newPerson1[i])
+        }
+
+        // ● use const for creating arrays
+
+        // const didnt have the right to change the value of the array in primitive or reference data type..but in refrence data-type we have pop,push method to change and add or del the value of the array..
+
+
+        // ● While loop in array
+        let a =0;
+        while(a<person.length){
+            a++
+            // console.table(person[a])
+            console.log(person[a])
+        }
+
+
+        // ● For of loop
+
+        for(let key of newPerson){
+            console.table(key)
+        }
+        // ● For in loop
+        for(let key in newPerson){
+            console.table(newPerson[key])
+        }
+
+        // ● Array destructuring
+        const [person1,...person2] = person
+        console.log(person1)
+        console.table(person2)
+
+    //Objects in JavaScript
+        // ● Intro to objects
+        // object is collection of key value pairs in javascript where we can write different type of data-types inside key value pair
+
+        const employee = {employeeName : 'Sagar', employeeSalary : 90000, employeeId : 123456789, "employee   Qualification" : "BCA"}
+        console.table(employee)
+
+        // ● Dot vs Bracket Notation
+        // dot is used in find the key and what we have to print in the console 
+        console.log("----------------DOT NOTATION-------------")
+        console.log(employee.employeeName)
+        console.log(employee.employeeId)
+        // notation works same but key name having space we will used notation
+
+        console.log("----------------BRACKET NOTATION-------------")
+        console.log(employee["employee   Qualification"])
+
+
+        // ● Iterate objects
+        // iterate the objects run the loops in object
+
+        console.log("----------------ITERATE OBJECT-------------")
+        for(let key in employee){
+            console.log(employee[key])
+        }
+
+        // ● Computed properties
+
+        key1 = "key1"
+        key2 = "key2"
+
+        value1 = "Value 1"
+        value2 = "Value 2"
+
+        // insert the key value pair the null object 
+
+        const obj = {
+
+        }
+
+        obj[key1] = value1
+        obj[key2] = value2
+
+        console.log(obj)
+
+
+        // ● Spread operator in objects
+        // spread operator is used for copy the object from the old object 
+        // you can add the key value pair in the new array 
+
+        const newObject = {...obj,...employee,newKey :"spread operator works"}
+        console.table(newObject)
+
+
+        // ● Object Destructuring
+        // object destrucuring same as array destruturing but we have to remind obj destructure with same name key
+        const {employeeName,employeeSalary} = employee
+        console.log(employeeName)
+        console.log(employeeSalary)
+
+
+        // ● Objects inside Array
+        console.log('------------- Objects inside Array----------------------')
+        const objArray = [
+            {productID1 : 1,productName : "Mobile", productPrice : 25000},
+            {productID2 : 12,productName : "TV", productPrice : 50000},
+            {productID3 : 123,productName : "Camera", productPrice : 75000},
+            {productID4 : 1234,productName : "Macbook", productPrice : 150000}
+        ]
+
+        for(key of objArray){
+            console.log(key.productName)
+        }
+
+
+        // ● Nested Destructuring
+        const [{productPrice,productName}] = objArray
+        console.log(productPrice,productName)
+
+
+        //         Functions in JavaScript
+
+        // ● Function declaration
+        function addTwo(a,b){
+            return a+b
+        }
+
+        const ans = addTwo(35,35)
+        console.log(ans)
+
+
+        // ● Function Expression
+        const subTwo  = function(a,b){
+            return a-b
+        }
+
+        console.log(subTwo(30,100))
+
+        // ● Arrow Functions
+
+        const arrowfunc = (a,b,c) =>{
+            return a+b+c
+        }
+
+        console.log(arrowfunc(10,-10,70))
+
+
+        // ● Function declarations are hoisted (covered in great detail , later in this
+        // course)
+        // function declaration are hoisted but function expression and arrow function are not hoisted
+        hell();
+        function hell(){
+            console.log('hello duniya')
+        }
+
+        // ERROR IT GIVES U ERROR 
+        // Cannot access 'hello' before initialization
+        // hello();
+        // const hello = function(){
+        //     console.log('hello galaxy')
+        // }
+
+
+
+        // ● Function inside function
+        let emp_id = 122334456;
+        let object1 = [
+            {employee_id : 123456789,name : "raj" , salary : 50000, qualification : "12th pass & BCA"},
+            {employee_id : 122334456,name : "sagar" , salary : 80000, qualification : "12th pass & BCA"},
+            {employee_id : 677889012,name : "akshat" , salary : 10000, qualification : "12th pass & BCA"},
+            {employee_id : 233445566,name : "priyanshu" , salary : 20000, qualification : "12th pass & BCA"},
+            {employee_id : 677889901,name : "aadhya" , salary : 30000, qualification : "Play School"},
+            {employee_id : 122334567,name : "adya" , salary : 40000, qualification : "Nursery"},
+            {employee_id : 899001122,name : "sakshi" , salary : 10000, qualification : "8th class"},
+            {employee_id : 344556677,name : "anil" , salary : 30000, qualification : "B.com"},
+            {employee_id : 899001233,name : "manish" , salary : 30000, qualification : "B.com"},
+            {employee_id : 455678890,name : "chanchal" , salary : 10000, qualification : "10th"},
+            {employee_id : 112233445,name : "jaiko" , salary : 10000, qualification : "9th"},
+            {employee_id : 566778899,name : "doraemon" , salary : 90000, qualification : "2022 century"},
+            {employee_id : 667788990,name : "nobita" , salary : 100000, qualification : "2021 century"}
+        ]
+
+        function findEmployeeId(emp_id,object1){
+            for(let key in object1){
+                if(object1[key].employee_id === emp_id){
+                    return `your ID is ${object1[key].employee_id} \n${findEmployeeData(emp_id,object1)} \n${findEmployeeSalary(emp_id,object1)}`
+                }
+            }
+            function findEmployeeData(emp_id,object1){
+                for(let key in object1){
+                    if(object1[key].employee_id === emp_id){
+                    return `your id is found in our data and your name is ${object1[key].name}`
+                        }
+                }
+            }
+
+            function findEmployeeSalary(emp_id,object1){
+            for(let key in object1){
+                if(object1[key].employee_id === emp_id){
+                return `your id is found in our data and your salary is ${object1[key].salary}`
+                    }
+            }
+
+        }
+            return `not found`
+
+
+    }
+        
+        const ans2 = findEmployeeId(emp_id,object1)
+        console.log(ans2)
+
+
+        // ● Lexical Scope
+
+
+        console.log("VARIABLE DECLARE INSIDE FUNCTION AND THIER LEXICAL SCOPE")
+        function app(){
+            let myVar = "value 70"
+            console.log(myVar)
+            function secondApp(){
+                console.log(myVar)
+            }
+            secondApp()
+        }
+
+        app()
+
+        console.log("VARIABLE DECLARE OUTSIDE FUNCTION AND  THIER LEXICAL SCOPE")
+        let myVar1 = "value 70"
+        function app1(){
+            console.log(myVar1)
+            function secondApp(){
+                console.log(myVar1)
+            }
+            secondApp()
+        }
+
+        app1()
+
+    
+        // ● Block Scope Vs Function Scope
+        // BLOCK SCOPE ------------- let AND const 
+        // FUNCTION SCOPE ---------- var
+
+        {
+        let name1 = 'raj'
+        const name2 = 'sagar'
+        }
+        // console.log(name1) // ERROR ------------ Uncaught ReferenceError: name1 is not defined
+
+        {
+            var name1 = 'kumar'
+        }
+
+        console.log(name1)  // its doesnt give eror because var is a function scope variable we can fetch inside block or outside block ...
+
+        
+        // ● Very brief intro to callback functions(covered in great detail , later in the
+        // course)
+
+        function myfunc2(name){
+            console.log('hello galaxy')
+            console.log(`hello ` +name)
+        }
+
+        function myfunc(){
+            console.log('hello duniya')
+            myfunc2('raj')
+        }
+
+        myfunc(myfunc2)
+
+
+        // ● Functions returning Functions
+
+        function ducatEmployee(emp_id,object1){
+            for(let key in object1){
+                if(object1[key].employee_id !== emp_id){
+                    console.log("not found")
+                }
+                break;
+            }
+            for(let key in object1){
+                if(object1[key].employee_id === emp_id){
+                    console.log(`your ID is found in our data`)
+                }
+            }
+            function ducatEmployeeData(emp_id,object1){
+                for(let key in object1){
+                if(object1[key].employee_id === emp_id){
+                    return `your name is ${object1[key].name} and ur salary is ${object1[key].salary}`
+                }
+            }
+        }
+        return ducatEmployeeData;
+        
+    }
+
+    const ans5 = ducatEmployee(emp_id,object1);
+    console.log(ans5(emp_id,object1))
+
+    let numbers = [1,2,3,4,5,6,7,8,9,10]
+    const isEven = numbers.filter((num)=>{
+        return num%2==0;
+    })
+
+    console.log(isEven)
+
+    // Question: You have an array of objects representing people with their attributes such as  name, age, and occupation. Using the filter method, create a new array that only contains people who are both older than 30 years old and have the occupation of "Engineer." Additionally, sort the filtered array alphabetically by their names. Provide a code example to demonstrate this.
+
+    // Remember to create the sample data for the array of objects and then use the filter and sort methods to achieve the desired result
+
+
+//     Very Important Array Methods
+//      ● Foreach method
+// for each method is just like when you have to run a loop in a array but with some condition and for each method also gives the index of the array
+// it doesnt return anything.
+console.log("-------- array methods -------")
+console.log("-------- for each method -------")
+const array5 = [12,13,14,15,16,17,18,19,20]
+const sn = []
+const sqaureNum5  = array5.forEach((num)=>{
+    sn.push(num*num)
+})
+
+
+console.log('sqaure of an array is ');
+console.log(sn)
+
+// ● Map method
+// it is do the same task but its return the array and it also mutate the array
+
+console.log("-------- map method -------")
+const findEven  = array5.map((nums)=>{
+    return nums%2==0
+})
+
+const findsq = array5.map((num)=>{
+    return num*num
+})
+
+
+console.log(findEven);
+console.log(findsq)
+
+
+// ● Filter method
+// filter method same work as map method but with different condtion 
+
+const filterperson =[
+    {firstName:"sagar",age:24},
+    {firstName:"RAJ",age:17},
+]
+const filter = filterperson.filter((isAge)=>{
+    if(isAge.age<20){
+        console.log(isAge.firstName)
+    }
+})
+// console.log(filter)
+
+// ● Reduce method
+ // reduce method has the accumulator and its curent value mainly i think its used in e-commerce cart case
+
+const flipkart  = [
+    {productName:'laptop',productPrice:35000},
+    {productName:'mobile',productPrice:15000},
+    {productName:'tv', productPrice:25000}
+]
+const amazon = flipkart.reduce((total,current)=>{
+    return total + current.productPrice 
+},0)
+
+console.log(amazon)
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var nameList=["Rajeev","Sanjeev","Rajesh","Rakesh"];
+        function loadDtata()
+        {
+            document.getElementById("result").innerHTML=nameList
+        }
+        function addInFirst()
+        {
+            var input=prompt("Enter a name ?");
+            nameList.unshift(input)
+            document.getElementById("result").innerHTML=nameList
+        }
+        function addInLast()
+        {
+            var input=prompt("Enter a name ?");
+            nameList.push(input)
+            document.getElementById("result").innerHTML=nameList
+        }
+        function removeFromFirst()
+        {
+            var rec=nameList.shift();
+            // alert(rec)
+            var res=confirm("Do you want to delete this "+rec+" ?")
+            // alert(res)
+            if(res===true)
+            {
+                document.getElementById("result").innerHTML=nameList
+            }
+            else 
+            {
+                nameList.unshift(rec);
+                document.getElementById("result").innerHTML=nameList
+            }
+            //  var res=confirm("Do you want to delete this  ?")
+            // if(res===true)
+            // {
+              
+            //     nameList.shift()
+            //     document.getElementById("result").innerHTML=nameList
+            // }
+            // else 
+            // {
+               
+            //     document.getElementById("result").innerHTML=nameList
+            // }
+          
+        }
+        function removeFromLast()
+        {
+            var rec=nameList.pop();
+            // alert(rec)
+            var res=confirm("Do you want to delete this "+rec+" ?")
+            // alert(res)
+            if(res===true)
+            {
+                document.getElementById("result").innerHTML=nameList
+            }
+            else 
+            {
+                nameList.push(rec);
+                document.getElementById("result").innerHTML=nameList
+            }
+            //  var res=confirm("Do you want to delete this  ?")
+            // if(res===true)
+            // {
+              
+            //     nameList.shift()
+            //     document.getElementById("result").innerHTML=nameList
+            // }
+            // else 
+            // {
+               
+            //     document.getElementById("result").innerHTML=nameList
+            // }
+          
+        }
+    </script>
+</head>
+<body onload="loadDtata()">
+
+    <table border="1" align="center" width="60%">
+        <tr>
+            <td colspan="2">
+                <div id="result" style="text-align: center;"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Add In First" onclick="addInFirst()">
+            </td>
+            <td>
+                <input type="submit" value="Add In Last"  onclick="addInLast()">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Remove from First"  onclick="removeFromFirst()">
+            </td>
+            <td>
+                <input type="submit" value="Remove from Last" onclick="removeFromLast()">
+            </td>
+        </tr>
+    </table>
+    
+</body>
+</html>
