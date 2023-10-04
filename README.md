@@ -1,3 +1,3 @@
 # Javascript-Practice
 </br>
-Author - Raj Kumar
+Author - Raj Kumar gupta
